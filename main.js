@@ -116,7 +116,6 @@ document.getElementById("takeShotsBtn").onclick = async () => {
     togglePreview();
   }
   document.getElementById("previewBtn").disabled = true;
-  document.getElementById("captureBtn").disabled = true;
   document.getElementById("takeShotsBtn").disabled = true;
   const numOfShots = parseInt(document.getElementById("numShots").value, 10);
   for (let i = 0; i < numOfShots; i++) {
@@ -129,7 +128,6 @@ document.getElementById("takeShotsBtn").onclick = async () => {
   }
   document.getElementById("numShots").innerText = "Capture finished.";
   document.getElementById("previewBtn").disabled = false;
-  document.getElementById("captureBtn").disabled = false;
   document.getElementById("takeShotsBtn").disabled = false;
 };
 
