@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Camera Test</title>
+    <script type="module" src="./main.js"></script>
+    <style>
+      body {
+        font-family: sans-serif;
+        padding: 20px;
+      }
+      button {
+        padding: 10px 14px;
+        margin-right: 10px;
+      }
+      img {
+        max-width: 100%;
+        margin-top: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Camera Controls</h1>
+    <button id="connectBtn">Connect</button>
+    <button id="previewBtn" disabled>Toggle Preview</button>
+    <div id="actions" style="display: none">
+      <div>
+        <h3>Current Camera Configuration</h3>
+        <h4 id="cameraName"></h4>
+        <ol>
+          <li>
+            Image Format:
+            <select id="imgFormat"></select>
+          </li>
+          <li>
+            ISO:
+            <select id="iso"></select>
+          </li>
+          <li>
+            Aperture:
+            <select id="aperture"></select>
+          </li>
+          <li>
+            Shutter Speed:
+            <select id="shutterSpeed"></select>
+          </li>
+        </ol>
+      </div>
+      <div>
+        <h3>Take series of photos</h3>
+        <ul>
+          <div>
+            Number of shots: <input type="number" id="numShots" value="30" />
+          </div>
+          <div id="numShots"></div>
+          <button id="takeShotsBtn" disabled>Take Shots</button>
+        </ul>
+      </div>
+      <br />
+      <img id="previewImg" />
+    </div>
+  </body>
+</html>

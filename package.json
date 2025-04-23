@@ -1,0 +1,18 @@
+{
+  "name": "astro-camera",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vite"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "web-gphoto2": "^0.4.1"
+  },
+  "devDependencies": {
+    "vite": "^6.3.2"
+  }
+}
