@@ -1,5 +1,3 @@
-import fs from "fs";
-
 export default {
   server: {
     headers: {
@@ -9,8 +7,5 @@ export default {
   },
   build: {
     target: "esnext",
-    wasm: {
-      mimeType: "application/wasm", // Explicit MIME type for wasm
-    },
   },
 };

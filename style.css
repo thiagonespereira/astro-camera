@@ -1,0 +1,104 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #121212;
+  color: #fff;
+  padding: 1rem;
+}
+.container {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  height: 90vh;
+}
+.left-panel {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.panel {
+  background-color: #1e1e1e;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+.title {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+.connection-status {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+.status-indicator {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  background-color: #3b82f6;
+}
+button {
+  background-color: #2d2d2d;
+  border: 1px solid #3b82f6;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  margin-top: 5px;
+}
+.settings label {
+  display: block;
+  margin-top: 1rem;
+  font-size: 0.9rem;
+}
+.settings select, .settings input {
+  background-color: #2d2d2d;
+  color: #fff;
+  border: none;
+  padding: 0.5rem;
+  width: 100%;
+  margin-top: 0.25rem;
+  border-radius: 0.5rem;
+}
+.settings h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-top: 1rem;
+}
+.preview img {
+  width: 100%;
+  border-radius: 0.5rem;
+  margin-top: 1rem;
+}
+.logs {
+  flex: 1;
+  background-color: #1e1e1e;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  overflow-y: auto;
+}
+.logs h2 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+.logs p {
+  font-family: monospace;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+  .logs {
+    max-height: 200px;
+  }
+}
