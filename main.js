@@ -330,6 +330,7 @@ async function takeShots() {
       a.href = URL.createObjectURL(blobFromFitsData);
       a.download = `image-${stringifyNameNumber(nameNumber)}.fits`;
       a.click();
+      nameNumber++;
     } else {
       // wait 1 second before next shot
       await new Promise((resolve) => setTimeout(resolve, 1000));
