@@ -41,8 +41,17 @@
 
           <label for="numShots">Number of shots</label>
           <input type="number" id="numShots" value="30" />
+
+          <label for="nameNumber">Start file naming with number</label>
+          <input type="number" id="nameNumber" value="1" />
+
+          <div class="fits-container">
+            <div class="checkbox-container">
+              <input type="checkbox" id="fits" checked />
+            </div>
+            <p>Convert to FITS (adds ~2 minutes between shots)</p>
+          </div>
           <button id="takeShotsBtn" disabled>Take Shots</button>
-          <h4 id="numShots"></h4>
         </div>
       </div>
 
@@ -54,7 +63,20 @@
       </div>
       <div id="preview-panel" class="panel preview" style="display: none">
         <div class="title">Preview</div>
-        <img id="previewImg" />
+        <div class="img-container">
+          <img id="previewImg" />
+          <div class="img-overlay"></div>
+        </div>
+        <button id="centerZoomBtn">Center Zoom</button>
+      </div>
+    </div>
+    <div class="zoom-container" id="zoom-container" style="display: none;">
+      <div class="zoom-pannel">
+        <div class="img-container-zoom">
+          <img id="zoomImg" />
+          <div class="img-overlay"></div>
+        </div>
+        <button id="closeZoomBtn">Close</button>
       </div>
     </div>
   </body>

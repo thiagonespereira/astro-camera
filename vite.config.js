@@ -8,4 +8,7 @@ export default {
   build: {
     target: "esnext",
   },
+  optimizeDeps: {
+    exclude: ['libraw-wasm']
+  }
 };
