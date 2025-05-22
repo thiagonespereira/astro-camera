@@ -42,16 +42,18 @@
           <label for="numShots">Number of shots</label>
           <input type="number" id="numShots" value="30" />
 
-          <label for="nameNumber">Start file naming with number</label>
-          <input type="number" id="nameNumber" value="1" />
+          <!-- Disabled for now, not worth it to do on Fuji cameras during capture time -->
+          <!-- <label for="nameNumber">Start file naming with number</label>
+          <input type="number" id="nameNumber" value="1" /> -->
 
-          <div class="fits-container">
+          <!-- <div class="fits-container">
             <div class="checkbox-container">
-              <input type="checkbox" id="fits" checked />
+              <input type="checkbox" id="fits" />
             </div>
             <p>Convert to FITS (adds ~2 minutes between shots)</p>
-          </div>
+          </div> -->
           <button id="takeShotsBtn" disabled>Take Shots</button>
+          <button id="testShotBtn" disabled>Test Shot</button>
         </div>
       </div>
 
