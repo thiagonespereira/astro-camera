@@ -1,4 +1,5 @@
-import { Camera } from "https://unpkg.com/web-gphoto2@0.4.1/build/camera.js";
+// import { Camera } from "https://unpkg.com/web-gphoto2@0.4.1/build/camera.js";
+import { Camera } from "./scripts/camera.js";
 
 let camera;
 let previewEnabled = false;
@@ -45,7 +46,6 @@ let valuesArray = ["1", "2", "4", "5", "17"];
 async function previewZoom() {
   choice = choice === 4 ? 0 : choice + 1;
   let choiceValue = valuesArray[choice];
-  console.log({ choice, choiceValue });
   await camera.setConfigValue("d01b", choiceValue);
 }
 
