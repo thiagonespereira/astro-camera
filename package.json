@@ -16,6 +16,6 @@
     "web-gphoto2": "^0.4.1"
   },
   "devDependencies": {
-    "vite": "^6.3.2"
+    "vite": "^6.3.4"
   }
 }
