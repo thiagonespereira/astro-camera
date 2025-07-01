@@ -40,6 +40,15 @@ async function takeTestShot() {
   enableButtons(["previewBtn", "takeShotsBtn", "testShotBtn"]);
 }
 
+let choice = 0;
+let valuesArray = ["1", "2", "4", "5", "17"];
+async function previewZoom() {
+  choice = choice === 4 ? 0 : choice + 1;
+  let choiceValue = valuesArray[choice];
+  console.log({ choice, choiceValue });
+  await camera.setConfigValue("d01b", choiceValue);
+}
+
 async function connectCamera() {
   try {
     appendLog(`[${new Date().toLocaleTimeString()}] Starting application...`);
@@ -268,6 +277,10 @@ document.getElementById("centerZoomBtn").onclick = async () => {
 
 document.getElementById("closeZoomBtn").onclick = async () => {
   document.getElementById("zoom-container").style.display = "none";
+};
+
+document.getElementById("testZoomBtw").onclick = async () => {
+  await previewZoom();
 };
 
 /** DISABLED FUNCTIONS TO CONVERT TO FITS ON CAPTURE TIME */
